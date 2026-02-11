@@ -119,10 +119,11 @@ def main():
             for e in errors:
                 print(f"  - {e}")
             total_errors += len(errors)
-        else:
-            print(f"{filepath}: OK")
 
-    print(f"\n{len(puzzle_files)} puzzles checked, {total_errors} errors")
+    if total_errors:
+        print(f"\n{len(puzzle_files)} puzzles checked, {total_errors} errors")
+    else:
+        print(f"All {len(puzzle_files)} puzzles OK")
     sys.exit(1 if total_errors else 0)
 
 
