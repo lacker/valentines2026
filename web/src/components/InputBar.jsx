@@ -20,7 +20,7 @@ export default function InputBar({ onSubmit, phase }) {
     return (
       <div className="border-t border-gray-200 bg-white px-4 py-3">
         <button
-          onClick={() => window.location.reload()}
+          onClick={() => { window.location.search = '?new=1'; }}
           className="w-full bg-blue-500 text-white rounded-full py-3 font-medium active:bg-blue-600"
         >
           play again

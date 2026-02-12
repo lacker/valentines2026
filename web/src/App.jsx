@@ -4,11 +4,11 @@ import ChatWindow from './components/ChatWindow';
 import InputBar from './components/InputBar';
 
 export default function App() {
-  const { messages, score, puzzleIndex, totalPuzzles, phase, handleGuess } = useGame();
+  const { messages, solved, totalPuzzles, phase, handleGuess } = useGame();
 
   return (
     <div className="h-dvh flex flex-col bg-gray-50">
-      <ScoreHeader score={score} puzzleIndex={puzzleIndex} total={totalPuzzles} />
+      <ScoreHeader solved={solved} total={totalPuzzles} />
       <ChatWindow messages={messages} />
       <InputBar onSubmit={handleGuess} phase={phase} />
     </div>
